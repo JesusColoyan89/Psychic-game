@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hangman</title>
+	<title>Psychic</title>
 	<link>
 </head>
 <body>
@@ -19,17 +19,38 @@
 	<script type="text/javascript">
 
 
-	var letters= ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+	var computerChoices= ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
+	var wins = 0;
+	var losses = 0;
+	var guesses = 0;
+	var guessesLeft = 9;
+	var guessedLetters = [];
+	var letterGuessed = null;
 	
-	document.onkeyup = function(event) {
-		var userGuess = event.key;
-		var computerGuess = letters[Math.floor(Math.random() *letters.length)];
+	var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+	var updateGuessesLeft = function() {
+		document.querySelector('#guessLeft').innerHTML = "Guesses left: " + guessesLeft;
+	};
 	
+	var updateLetterGuessed = function() {
+		this.letterGuessed = this.computerChoices[Math.floor(Math.random() * this.computerChoices.length)];
+	};
 
-
-	document.write("#guesses"[userGuess]);
+	var updateGuessesSoFar = function() {
+	document.querySelector('#guesses').innerHTML = "Your Guesses so Far: " + guessedLetters.join(',');
 };
+
+</script>
+</body>
+</html>
+
+
+
+
+	
+
 	
 
 
