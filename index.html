@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman</title>
+	<link>
+</head>
+<body>
+
+<div id="game">
+	<h1> The Psychic Game </h1> 
+	<hr>
+	<p id="wins">Wins:</p> 
+    <p id="losses">Losses:</p>
+    <p id="guessleft">Guesses Left: </p>
+    <p id="guesses"> Your Guesses so far: </p>
+
+    </div>
+
+	<script type="text/javascript">
+
+
+	var letters= ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+	
+	document.onkeyup = function(event) {
+		var userGuess = event.key;
+		var computerGuess = letters[Math.floor(Math.random() *letters.length)];
+	
+
+
+	document.write("#guesses"[userGuess]);
+};
+	
+
+
+	
+	
+
+	
+
+
+
+
+
+
+
+
+	
+
+	</script>	
+
+</body>
+</html>
